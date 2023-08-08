@@ -1,6 +1,6 @@
 # C++ Shipping Cost Calculator
 
-This C++ program demonstrates the use of polymorphism in a simple shipping system. It uses an inheritance hierarchy with the base class `Shipping`, and two derived classes `Package` and `Envelope`.
+This C++ program demonstrates the use of polymorphism to calculate and display shipping costs for multiple shipments. The program uses an inheritance hierarchy with the Package and Envelope classes inheriting from the base class Shipping. It also includes a Person class to represent sender and recipient information.
 
 ## Class Hierarchy
 
@@ -38,4 +38,25 @@ This C++ program demonstrates the use of polymorphism in a simple shipping syste
 In the main function (`main.cpp`), the program uses a vector of pointers to `Shipping` objects. The vector stores both `Package` and `Envelope` objects as they are derived from the `Shipping` base class.
 
 The program iterates over the vector and processes each shipment polymorphically by calling the virtual `calculateCost()` method. This enables the program to calculate the shipping cost for each specific shipment type (Package or Envelope) correctly.
+
+## Sample Output
+```
+Shipper Address: Santiago, Tlalpan_18, Coyoacán, CDMX, 01589
+Recipient Address: Marcelita, Miramontes_29, Coyoacán, CDMX, 09415
+Package Shipping Cost: 820.96
+
+Shipper Address: Hector, Periferico_301, Tlalpan, CDMX, 08391
+Recipient Address: Karen, Cuemanco_18, Xochimilco, CDMX, 014782
+Envelope Shipping Cost: 1141.25
+
+Shipper Address: Daniel, 1602_CantonSt, Dallas, Texas, 75201
+Recipient Address: Genaro, 312_EBroadway, Anaheim, California, 928205
+Package Shipping Cost: 1066.47
+
+Shipper Address: Luis, Carrera_51_58, Medellín, Antioquía, 11111
+Recipient Address: Jeannette, Insurgentes_200, Monterrey, Nuevo_León, 64630
+Envelope Shipping Cost: 2381.69
+
+Total Shipping Cost: 5409.37
+```
 
